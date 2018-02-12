@@ -13,5 +13,12 @@ namespace Log4NetExample
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+
+            LoggerHelper.Info(new { A = DateTime.Now });
+
+            base.OnStartup(e);
+        }
     }
 }
