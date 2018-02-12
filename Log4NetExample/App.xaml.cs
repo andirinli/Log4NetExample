@@ -17,6 +17,9 @@ namespace Log4NetExample
         {
 
             LoggerHelper.Info(new { A = DateTime.Now });
+            LoggerHelper.Warning(new { B = string.Format("Özel nesne Örnek") }, new Exception("Eğer hata var ise eklemek için exception parametresi"));
+            LoggerHelper.Error(new { C = int.MaxValue, D = int.MinValue });
+            LoggerHelper.Fatal(new { E = "istenilen her obje koyulabilir", F = new Version(1,2,3,4) });
 
             base.OnStartup(e);
         }
