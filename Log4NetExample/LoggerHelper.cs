@@ -83,6 +83,22 @@ namespace Log4NetExample
         {
             Log.Info(message, ex);
         }
+        public static void Debug(object message, Exception ex = null)
+        {
+            Log.Debug(message, ex);
+        }
+        public static void Warning(object message, Exception ex = null)
+        {
+            Log.Warn(message, ex);
+        }
+        public static void Error(object message, Exception ex = null)
+        {
+            Log.Error(message, ex);
+        }
+        public static void Fatal(object message, Exception ex = null)
+        {
+            Log.Fatal(message, ex);
+        }
         #endregion
         #region Internal Class
         public class LogLockMechanism : FileAppender.MinimalLock
